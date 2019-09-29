@@ -5,15 +5,21 @@ import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import indigo from "@material-ui/core/colors/indigo";
 import pink from "@material-ui/core/colors/pink";
-import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import Table from "./Table.js";
+import Contact from "./Contact.js";
+import Graph from "./Graph.js";
+import Snackbar from "@material-ui/core/Snackbar";
+import AppBar from "@material-ui/core/AppBar";
 
 const theme = createMuiTheme({
   palette: {
-    primary: indigo,
-    secondary: pink
+    primary: { main: "#98012E" },
+    secondary: { main: "#231F20" }
   }
 });
 
@@ -21,26 +27,91 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      addData: true
+      addData: false,
+      message: "",
+      open: false
     };
+  }
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.setState({ addData: true });
+      }.bind(this),
+      2000
+    );
+    setTimeout(
+      function() {
+        this.setState({
+          open: true,
+          message: "New provider has been scraped."
+        });
+      }.bind(this),
+      2200
+    );
+    setTimeout(
+      function() {
+        this.setState({
+          open: false
+        });
+      }.bind(this),
+      4200
+    );
+    setTimeout(
+      function() {
+        this.setState({
+          open: true,
+          message: "Case worker has been sent updated information on John."
+        });
+      }.bind(this),
+      5200
+    );
+    setTimeout(
+      function() {
+        this.setState({
+          open: false
+        });
+      }.bind(this),
+      7200
+    );
   }
   render() {
     return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <AppBar
+          position="static"
+          style={{ alignItems: "center", marginBottom: "30px" }}
+        >
+          <Toolbar
+            position="static"
+            style={{ textAlign: "center", alignItems: "center" }}
+          >
+            <Typography variant="h6">VetMyNeeds</Typography>
+          </Toolbar>
+        </AppBar>
         <Container maxWidth="lg">
-          <Typography component="div" style={{}}>
-            <Button color="primary">Primary</Button>
-            <Button
-              onClick={e => {
-                this.setState({ addData: !this.state.addData });
-              }}
-              color="secondary"
-            >
-              Secondary
-            </Button>
-            <Table addData={this.state.addData} />
-          </Typography>
+          <Grid justify="center" container spacing={3}>
+            <Grid item xs={12} md={8} lg={3}>
+              <Contact />
+            </Grid>
+            <Grid item xs={12} md={8} lg={6}>
+              <Graph />
+            </Grid>
+            <Grid item xs={12} md={8} lg={9}>
+              <Typography component="div" style={{}}>
+                <Table addData={this.state.addData} />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Snackbar
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            key={`bottom-center`}
+            open={this.state.open}
+            ContentProps={{
+              "aria-describedby": "message-id"
+            }}
+            message={<span id="message-id">{this.state.message}</span>}
+          />
         </Container>
       </ThemeProvider>
     );
