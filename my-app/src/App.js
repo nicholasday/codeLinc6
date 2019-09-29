@@ -41,7 +41,7 @@ class App extends React.Component {
       begin
     );
 
-    let scraped = begin + 200;
+    let scraped = begin + 300;
     setTimeout(
       function() {
         this.setState({
@@ -52,7 +52,7 @@ class App extends React.Component {
       scraped
     );
 
-    let closed = scraped + 1500;
+    let closed = scraped + 1700;
     setTimeout(
       function() {
         this.setState({
@@ -62,7 +62,7 @@ class App extends React.Component {
       closed
     );
 
-    let caseworker = closed + 1000;
+    let caseworker = closed + 1200;
     setTimeout(
       function() {
         this.setState({
@@ -73,7 +73,7 @@ class App extends React.Component {
       caseworker
     );
 
-    let closecaseworker = caseworker + 1500;
+    let closecaseworker = caseworker + 1700;
     setTimeout(
       function() {
         this.setState({
@@ -83,7 +83,7 @@ class App extends React.Component {
       closecaseworker
     );
 
-    let openvet = closecaseworker + 1000;
+    let openvet = closecaseworker + 1200;
     setTimeout(
       function() {
         this.setState({
