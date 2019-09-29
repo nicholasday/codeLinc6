@@ -3,9 +3,14 @@ function submit_message(message) {
 
     function handle_response(data) {
         $('.chat-container').append(`
-        <div class="chat-message col=md-5 offset-md-7 bot-message">
-        ${data.message}
-        </div>
+            <div class="flex">
+            <div class="dot">
+                <img src="static/lincoln-financial-logo.jpg">
+            </div>
+            <div class="chat-message col-md-5 offset-md-7 bot-message">
+                ${data.message}
+            </div>
+            </div>
         `)
         $("#loading").remove();
     }
@@ -20,8 +25,12 @@ $('#target').on('submit', function(e) {
     }
 
     $('.chat-container').append(`
-        <div class="chat-message col-md-5 human-message">
+        <div class="flex">
+        <div class="human-message col-md-5 chat-message">
             ${input_message}
+        </div>
+        <div class="dot2">
+        </div>
         </div>
         `)
     
@@ -34,4 +43,18 @@ $('#target').on('submit', function(e) {
         $('#input_message').val('')
 
         submit_message(input_message)
+
+        var scrolled = false;
+        function updateScroll() {
+            if (!scrolled) {
+                var element = document.getElementById("chatbox");
+                element.scrollTop = element.scrollHeight;
+            }
+        }
+
+        $("#chatbox").on('scroll', () => {
+            scrolled = true;
+        });
+
+        setInterval(updateScroll, 50);
 });

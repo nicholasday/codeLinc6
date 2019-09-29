@@ -1,12 +1,21 @@
 body, html {
     height: 100%;
+    background-color: #98012E;
 }
 
 .chat-container {
-    padding: 0px;
+    scrollbar-width: none;
+    height: 500px;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 5%;
     width: 500px;
     margin-left: 15%;
     margin-right: 15;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
 }
 
 .chat-message {
@@ -15,18 +24,21 @@ body, html {
     margin-bottom: 3px;
 }
 
-.bot-message {
+.human-message {
+    text-align: right;
     background: #22b538;
     max-width: 300px;
     color: white;
     margin-left: auto;
+    margin-right: 10px;
 }
 
-.human-message {
-    background: dodgerblue;
+.bot-message {
+    background: #FDEEBB;
     max-width: 300px;
-    color: white;
+    color: black;
     margin: 13px 1px;
+    margin-left: 10px;
 }
 
 .input {
@@ -36,11 +48,38 @@ body, html {
 }
 
 input {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
     padding: 5px 10px 5px 10px;
-    border: 2px solid;
-    border-radius: 4px;
+    border: none;
+    border-radius: 8px;
 }
 
 input:focus {
     outline: none;
+}
+
+.dot {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.dot2 {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
 }
