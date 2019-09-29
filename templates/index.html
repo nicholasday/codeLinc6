@@ -10,14 +10,15 @@
 </head>
 <body>
     <div class="container h-100">
+        <img src="static/vetmyneeds.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%; padding-top: 15px;">
         <div class="row align-items-center h-100">
             <div class="col-md-8 col-sm-12 mx-auto">
-                <div class="chat-container" style="overflow:auto; max-height: 80vh">
-                    <div class="chat-message col-md-5 offset-md-7 bot-message">
-                        TESTING TESTING.
-                    </div>
+                <div class="chat-container" id="chatbox" style="overflow:auto; max-height: 80vh">
+                    <!--<div class="chat-message col-md-5 offset-md-7 bot-message">
+                        
+                    </div>-->
                 </div>
-                <form id="target">
+                <form id="target" autocomplete="off">
                     <input class="input" type="text" value="" placeholder="Type a message!" id="input_message"/>
                     <input type="submit" hidden>
                 </form>
