@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "codelinc6-chapelthrill-chat-yd",
+  "private_key_id": "5c69eb410f4ccd1b659a55ecd402b7d3fe5c4f6b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDmVCjB6dFWW018\nhYx3VWcgwRlQdmNI+mSpo30Mh1BoupEZi5LWUNymoFIL0SdHvpEnijPrdIdFJKI2\nUyjyvEwEv/tSJDJuxO4I2kfqP4Tl/cMIuSkgnADfgcubdFPwRAdmxE5EUNBR+eDi\nyMHFDkI190HnUfrlxcofvsqAjnYNvaNmOUp0nUHkv/mCA/x6ELmwwbwW7//IwGL4\nRwd6eycMCgZmP2BvUTXbHyTFMy7gjqFIJC70HySfbERMuDeUdQG8sswewMYMFGrr\nJ/QoyZcMw2WeA3c1xzHPIsWlqOQD9ktdbhg5uOZqU9JkNyhjOseUCUQiHNkX5I9c\newrwZd27AgMBAAECggEAP5Sdx6GuysLbafNHqi1mEXGcdkyn7Z5JKVbbDxlPRgmy\nQjX4K7cYodqBq4dp63Eciqio2mdJa/nH2W0tUYxPA8SnMK6TSWaNOt5embg9DGv3\nabILO1g1GX2v4dLD1QBCdsjbvhn815Q90vyOGMJt3o3JoHxN4R2vRQIazlAFIJdh\ngxv6IwVGkDJNLkZVdyvOwTuLo4MUPcJiO531gz01dDiyRAveVWFaU1NTkANcJYUk\nZz+IlrbwQU4jKY/fqlnlYv15MJYMNKurhFg2MKjRpTc5u9VDJF+Ul9uBiCRh+moV\nWIuVmyv5cA3DsPl9iE/bEihCc5UdpoMMx0RuAv1ZoQKBgQD/9rA+iDofny+JLHmf\njNf2ddlT03rGu2j1rhxMgHQHDu4oO7mlmrgUqcPvaPFSWP3IYE5NTRcuHoJa0hpP\nbxBt9R3MdQQRrua7FLkyAEhKTcNM1l0bwCGtqnlgz5fku99oHCiH6g+a/aDp45Jv\n5YnPtTyAd5OrY6E5wmkZnomYsQKBgQDmXInHZ+N46OEQZgTMYmnv8hksH06REleN\n69JUSEj48N3LybrU+jcR0MhljYRTL0ouC3QhfzCBSj576hwK9By86tG3esSEx3rr\nK9X6538oohBmK0yLEU7X/nQVL94qjqhx7WpwMUzE0qpzIFTRmNrny4H/Zf7+avd7\njKqcRKq4KwKBgQDVrGRiPyxuO1/eXh9FnrimCKkcvhzvC4HKHceH4W96eO887ObE\nJQ1oSnPDRtK1UI7CmAqloyYnnNZq5JuMFgYcFJQEmuaDsILyR5F1+SBfztyrJwPg\n55n1tKrQs1t0WZVc/qyjETRnyTRsK0qSWIabuwq/n5LJb0kmw3EjLuJkcQKBgDK+\n7ecMfrKy8mlvX906TMX72gm7N86DcOAls+a3KcQVI3byEIM8P4dgK9UbMKw2favZ\nABMk9qV0moEnmFfdYLtJKzu1AreRTgWiWXf1KTDlSqGHJkx4WpsARcgpDFLprDe0\nqj7ezV+KXNwRoj2t44MudIuzh1G6dJw155uXENiTAoGAYxGM5tKOU5PrMqQUwLiW\nRBO4uES8DBBM7VN80JcDkVntMJeFIWIQmnskyJyDyn+/ACnG/1mdGsuAJi4YonVf\nKscFM/FtGk6a59mBlBi0dsMrJx5LouR8unKTj443fTjz90UwLxEaFBjn2veEJFra\nJ24SFhkakxtUtrWWKDJLScQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-salhql@codelinc6-chapelthrill-chat-yd.iam.gserviceaccount.com",
+  "client_id": "114581738740355398515",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-salhql%40codelinc6-chapelthrill-chat-yd.iam.gserviceaccount.com"
+}

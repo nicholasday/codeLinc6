@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+    <title>Testing</title>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-md-8 col-sm-12 mx-auto">
+                <div class="chat-container" style="overflow:auto; max-height: 80vh">
+                    <div class="chat-message col-md-5 offset-md-7 bot-message">
+                        TESTING TESTING.
+                    </div>
+                </div>
+                <form id="target">
+                    <input class="input" type="text" value="" placeholder="Type a message!" id="input_message"/>
+                    <input type="submit" hidden>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
