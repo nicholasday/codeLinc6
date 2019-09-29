@@ -52,9 +52,9 @@ $('#target').on('submit', function(e) {
             }
         }
 
-        $("#chatbox").on('scroll', () => {
-            scrolled = true;
-        });
+        //$("#chatbox").on('scroll', () => {
+         //   scrolled = true;
+        //});
 
         setInterval(updateScroll, 50);
 });
