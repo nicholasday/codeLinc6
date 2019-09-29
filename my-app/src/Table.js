@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
+import Typography from "@material-ui/core/Typography";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
@@ -22,21 +23,80 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
+/*
+              <TableCell align="right">Type</TableCell>
+              <TableCell align="right">Website</TableCell>
+              <TableCell align="right">Location</TableCell>
+              <TableCell align="right">Phone</TableCell>
+              */
+
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  createData(
+    "Salvation Army",
+    "All",
+    "salvationarmycarolinas.org/greensboro/",
+    "Greensboro, NC",
+    "(336) 273-5572"
+  ),
+  createData(
+    "UNCG Vet Center",
+    "Education",
+    "military.uncg.edu/veterans-resource-center/",
+    "Greensboro, NC",
+    "336-334-5632"
+  ),
+  createData(
+    "Caring Services",
+    "Shelter, substance abuse, benefits",
+    "caringservices.org",
+    "High Point, NC",
+    "336.886.5594"
+  ),
+  createData(
+    "Cone Health System",
+    "Health, healthcare, disability",
+    "conehealth.com",
+    "Greensboro, NC",
+    "-"
+  )
 ];
 
 const rows2 = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Gingerbread2", 356, 16.0, 49, 3.9)
+  createData(
+    "Urban Ministry",
+    "Food, shelter",
+    "https://greensborourbanministry.org/",
+    "Greensboro, NC",
+    "(336) 271-5959"
+  ),
+  createData(
+    "Salvation Army",
+    "All",
+    "salvationarmycarolinas.org/greensboro/",
+    "Greensboro, NC",
+    "(336) 273-5572"
+  ),
+  createData(
+    "UNCG Vet Center",
+    "Education",
+    "military.uncg.edu/veterans-resource-center/",
+    "Greensboro, NC",
+    "336-334-5632"
+  ),
+  createData(
+    "Caring Services",
+    "Shelter, substance abuse, benefits",
+    "caringservices.org",
+    "High Point, NC",
+    "336.886.5594"
+  ),
+  createData(
+    "Cone Health System",
+    "Health, healthcare, disability",
+    "conehealth.com",
+    "Greensboro, NC",
+    "-"
+  )
 ];
 
 export default function SimpleTable(props) {
@@ -44,37 +104,45 @@ export default function SimpleTable(props) {
 
   var ourRows;
   if (props.addData) {
-    var ourRows = rows;
+    ourRows = rows2;
   } else {
-    var ourRows = rows2;
+    ourRows = rows;
   }
 
   return (
     <Paper className={classes.root}>
-      <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {ourRows.map(row => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+      <Typography
+        component="div"
+        style={{
+          maxHeight: 220,
+          overflow: "auto"
+        }}
+      >
+        <Table stickyHeader className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <TableCell>Provider Name</TableCell>
+              <TableCell align="right">Type</TableCell>
+              <TableCell align="right">Website</TableCell>
+              <TableCell align="right">Location</TableCell>
+              <TableCell align="right">Phone</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {ourRows.map(row => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.calories}</TableCell>
+                <TableCell align="right">{row.fat}</TableCell>
+                <TableCell align="right">{row.carbs}</TableCell>
+                <TableCell align="right">{row.protein}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Typography>
     </Paper>
   );
 }
