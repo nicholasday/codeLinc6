@@ -33,12 +33,15 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
+    let begin = 1200;
     setTimeout(
       function() {
         this.setState({ addData: true });
       }.bind(this),
-      2000
+      begin
     );
+
+    let scraped = begin + 200;
     setTimeout(
       function() {
         this.setState({
@@ -46,16 +49,20 @@ class App extends React.Component {
           message: "New provider has been scraped."
         });
       }.bind(this),
-      2200
+      scraped
     );
+
+    let closed = scraped + 1500;
     setTimeout(
       function() {
         this.setState({
           open: false
         });
       }.bind(this),
-      4200
+      closed
     );
+
+    let caseworker = closed + 1000;
     setTimeout(
       function() {
         this.setState({
@@ -63,15 +70,38 @@ class App extends React.Component {
           message: "Case worker has been sent updated information on John."
         });
       }.bind(this),
-      5200
+      caseworker
     );
+
+    let closecaseworker = caseworker + 1500;
     setTimeout(
       function() {
         this.setState({
           open: false
         });
       }.bind(this),
-      7200
+      closecaseworker
+    );
+
+    let openvet = closecaseworker + 1000;
+    setTimeout(
+      function() {
+        this.setState({
+          open: true,
+          message: "John has been sent an update on the new provider."
+        });
+      }.bind(this),
+      openvet
+    );
+
+    let closevet = openvet + 1500;
+    setTimeout(
+      function() {
+        this.setState({
+          open: false
+        });
+      }.bind(this),
+      closevet
     );
   }
   render() {
@@ -97,7 +127,7 @@ class App extends React.Component {
             <Grid item xs={12} md={8} lg={6}>
               <Graph />
             </Grid>
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} md={8} lg={11}>
               <Typography component="div" style={{}}>
                 <Table addData={this.state.addData} />
               </Typography>

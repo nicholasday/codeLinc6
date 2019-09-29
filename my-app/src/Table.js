@@ -39,25 +39,25 @@ const rows = [
     "(336) 273-5572"
   ),
   createData(
-    "Salvation Army",
-    "All",
-    "salvationarmycarolinas.org/greensboro/",
+    "UNCG Vet Center",
+    "Education",
+    "military.uncg.edu/veterans-resource-center/",
     "Greensboro, NC",
-    "(336) 273-5572"
+    "336-334-5632"
   ),
   createData(
-    "Salvation Army",
-    "All",
-    "salvationarmycarolinas.org/greensboro/",
-    "Greensboro, NC",
-    "(336) 273-5572"
+    "Caring Services",
+    "Shelter, substance abuse, benefits",
+    "caringservices.org",
+    "High Point, NC",
+    "336.886.5594"
   ),
   createData(
-    "Salvation Army",
-    "All",
-    "salvationarmycarolinas.org/greensboro/",
+    "Cone Health System",
+    "Health, healthcare, disability",
+    "conehealth.com",
     "Greensboro, NC",
-    "(336) 273-5572"
+    "-"
   )
 ];
 
@@ -77,18 +77,25 @@ const rows2 = [
     "(336) 273-5572"
   ),
   createData(
-    "Salvation Army",
-    "All",
-    "salvationarmycarolinas.org/greensboro/",
+    "UNCG Vet Center",
+    "Education",
+    "military.uncg.edu/veterans-resource-center/",
     "Greensboro, NC",
-    "(336) 273-5572"
+    "336-334-5632"
   ),
   createData(
-    "Salvation Army",
-    "All",
-    "salvationarmycarolinas.org/greensboro/",
+    "Caring Services",
+    "Shelter, substance abuse, benefits",
+    "caringservices.org",
+    "High Point, NC",
+    "336.886.5594"
+  ),
+  createData(
+    "Cone Health System",
+    "Health, healthcare, disability",
+    "conehealth.com",
     "Greensboro, NC",
-    "(336) 273-5572"
+    "-"
   )
 ];
 
